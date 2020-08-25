@@ -9,7 +9,11 @@ var taskFormHandler = function (event) {
   var taskDataObj = {
     name: taskNameInput,
     type: taskTypeInput
-  };
+  }; if (!taskNameInput || ! taskTypeInput){
+    alert("put something in bitch!");
+    return false;
+  }
+  formEl.reset();
   createTaskEl(taskDataObj);
   
 };
